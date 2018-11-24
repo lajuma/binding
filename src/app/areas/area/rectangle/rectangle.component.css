@@ -1,5 +1,9 @@
 .container {
 	background-color: rgb(173, 173, 173);
 	padding: 10px 20px;
-	width: 90%;
+	width: 100%;
+}
+
+input {
+	width: 50%;
 }

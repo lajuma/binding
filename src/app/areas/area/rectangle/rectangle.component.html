@@ -1,0 +1,7 @@
+<div class="container" [formGroup]="valuesForm">
+  <h5>Rectangle</h5>
+  <input type="number" class="form-control" placeholder="a" formControlName="a">
+  <input type="number" class="form-control" placeholder="b" formControlName="b">
+  <h5 class="result">Calculated Area: {{valuesForm.value.result}} m2</h5>
+</div>
+

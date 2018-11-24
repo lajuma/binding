@@ -1,0 +1,14 @@
+<div class="container">
+  <h5>Area {{index}}</h5>
+  <form [formGroup]="areaForm">
+    <input type="text" class="form-control" placeholder="type" formControlName="type">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" formControlName="added">Add to area
+      </label>
+    </div>
+    <app-rectangle [values]="area.values"></app-rectangle>
+    <p>{{result}}</p>
+  </form>
+
+</div>
