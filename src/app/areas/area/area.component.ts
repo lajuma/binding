@@ -10,15 +10,12 @@ import { Area } from './area.model';
 })
 export class AreaComponent implements OnInit {
 
-  @Input() area: Area;
+  @Input() area: FormGroup;
   @Input() index: number;
   
-  areaForm: FormGroup;
-
   constructor(private as: AreaService) { }
 
   ngOnInit() {
-    this.areaForm = this.as.createAreaForm(this.area);
   }
 
 }

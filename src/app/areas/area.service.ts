@@ -14,25 +14,20 @@ export class AreaService {
     new Area()
   ];
 
-  constructor(private fb: FormBuilder) {
+  total: number = 0;
+
+  constructor() {
    }
 
   getAreas() {
     return this.areas;
   }
 
-  createAreaForm(area: Area) {
-    const type = area.type;
-    const values = area.values;
-    const added = area.added;
+  getTotal() {
+    return this.total;
+  }
 
-    return this.fb.group({
-      type: type,
-      values: this.fb.group({
-        a: values.a,
-        b: values.b
-      }),
-      added: added
-    });
+  addToTotal(result: number) {
+    this.total += result;
   }
 }

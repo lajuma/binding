@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { AreaService } from '../../area.service';
 
 @Component({
@@ -9,19 +9,25 @@ import { AreaService } from '../../area.service';
 })
 export class RectangleComponent implements OnInit {
 
-  @Input() values: any;
-  valuesForm: FormGroup;
+  @Input() values: FormGroup;
+  result: number;
 
   constructor(
-    private fb: FormBuilder,
     private as: AreaService) { }
 
   ngOnInit() {
-    this.valuesForm = this.fb.group({
-      a: this.values.a,
-      b: this.values.b,
-      result: this.values.a * this.values.b
-    });
+    this.calculateResult();
+    this.addToTotal();
+  }
+
+  calculateResult() {
+    const a = this.values.value.a;
+    const b = this.values.value.b;
+    this.result = a * b;
+  }
+
+  addToTotal() {
+    this.as.addToTotal(this.result);
   }
 
 }
