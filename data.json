@@ -1,0 +1,24 @@
+{
+	"inquiry" : {
+		"id": 12345,
+		"elak" : "E234/00000239/XY",
+		"status": "PRE_EDITING",
+		"persons": [
+			{
+				"id": 123451,
+				"personId": 1,
+				"roleId": 30
+			},
+			{
+				"id": 123452,
+				"personId": 2,
+				"roleId": 31
+			},
+			{
+				"id": 123453,
+				"personId": 3,
+				"roleId": 32
+			}
+		]
+	}
+}

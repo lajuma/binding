@@ -1,0 +1,24 @@
+<!-- <form #form="ngForm"> -->
+  <div *ngFor="let person of persons" style="padding: 20px">
+
+    <!-- with objects and arrays, ngModel works perfectly like this -->
+    <label for="roleId">Rolle: </label>
+    <input 
+      name="roleId"
+      type="number"
+      [(ngModel)]="person.roleId">
+
+    <br>
+
+    <label for="personId">Person: </label>
+    <input 
+      name="personId"
+      type="number"
+      [(ngModel)]="person.personId">
+
+  </div>
+  <button (click)="addPerson()">Hinzufügen</button>
+<!-- </form> -->
+
+<!-- <pre style="margin-top: 50px; font-size: 10px">{{ persons | json }}</pre> -->
+

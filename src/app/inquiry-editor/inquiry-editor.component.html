@@ -1,0 +1,15 @@
+<label for="status">Status: </label>
+<!-- on primitive types: ngModel on the same component works perfectly like this -->
+<input 
+  name="status"
+  type="text"
+  [(ngModel)]="inquiry.status">
+<br>
+
+<!-- on primitive types inputted into nested componentes, this works only, because the event is emitted manually inside the component -->
+<app-elak-editor [(elak)]="inquiry.elak"></app-elak-editor>
+
+<!-- on objects and arrays, double binding works perfectly with ngModel doubleBinding inside the component -->
+<app-metadata-editor [(persons)]="inquiry.persons"></app-metadata-editor>
+
+<pre style="margin-top: 50px; font-size: 10px">{{ inquiry | json }}</pre>

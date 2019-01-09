@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "formbuilder-trial": {
+    "ngModel-data-transfer": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/formbuilder-trial",
+            "outputPath": "dist/ngModel-data-transfer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "formbuilder-trial:build"
+            "browserTarget": "ngModel-data-transfer:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "formbuilder-trial:build:production"
+              "browserTarget": "ngModel-data-transfer:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "formbuilder-trial:build"
+            "browserTarget": "ngModel-data-transfer:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "formbuilder-trial-e2e": {
+    "ngModel-data-transfer-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "formbuilder-trial:serve"
+            "devServerTarget": "ngModel-data-transfer:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "formbuilder-trial:serve:production"
+              "devServerTarget": "ngModel-data-transfer:serve:production"
             }
           }
         },
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "formbuilder-trial"
+  "defaultProject": "ngModel-data-transfer"
 }

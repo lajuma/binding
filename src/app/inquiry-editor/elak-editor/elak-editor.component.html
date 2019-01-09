@@ -1,0 +1,10 @@
+<label for="elak">Elak: </label>
+<!-- to emit this primitive data type of string, the ngModelChange directive should call a method, that emits the value to the outside -->
+<input 
+  name="elak"
+  type="text"
+  [(ngModel)]="elak"
+  (ngModelChange)="onElakChange()">
+
+  <pre style="margin-top: 50px; font-size: 10px">{{ elak | json }}</pre>
+
